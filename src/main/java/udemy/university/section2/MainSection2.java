@@ -1,10 +1,13 @@
 package udemy.university.section2;
 
+import udemy.university.section3.Variables;
+
 public class MainSection2 {
 
     public MainSection2() {
         helloWorld();
         presentJava();
+
     }
 
     public static void helloWorld() {
@@ -24,4 +27,5 @@ public class MainSection2 {
 
         System.out.println(presentation);
     }
+
 }
