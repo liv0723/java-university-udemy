@@ -5,6 +5,7 @@ public class MainSection3 {
     public MainSection3() {
         variables();
         bookDetails();
+        personDetails();
     }
 
     public void variables() {
@@ -31,5 +32,18 @@ public class MainSection3 {
                 year: %d
                 price: %f
                 is available: %b""".formatted(bookDetails.getName(), bookDetails.getYear(), bookDetails.getPrice(), bookDetails.getIsAvailableSale()));
+    }
+
+    public void personDetails() {
+        System.out.println("***************************** Book Detail ******************************");
+        PersonDetails personDetails = new PersonDetails();
+
+        System.out.println("""
+                name: %s
+                age: %d
+                height: %f
+                Country: %S
+                is Married: %c
+                """.formatted(personDetails.getName(), personDetails.getAge(), personDetails.getHeight(), personDetails.getCountry(), personDetails.getIsMarried()));
     }
 }
