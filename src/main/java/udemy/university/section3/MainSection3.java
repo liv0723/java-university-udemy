@@ -4,7 +4,7 @@ public class MainSection3 {
 
     public MainSection3() {
         variables();
-
+        bookDetails();
     }
 
     public void variables() {
@@ -21,5 +21,15 @@ public class MainSection3 {
                 char: %c
                 boolean: %b
                 """.formatted(variables.getVarByte(), variables.getVarShort(), variables.getVarInt(), variables.getVarFloat(), variables.getVarDouble(), variables.getVarChar(), variables.getVarBoolean()));
+    }
+
+    public void bookDetails() {
+        System.out.println("***************************** Book Detail ******************************");
+        BookDetails bookDetails = new BookDetails();
+        System.out.print("""
+                name: %s
+                year: %d
+                price: %f
+                is available: %b""".formatted(bookDetails.getName(), bookDetails.getYear(), bookDetails.getPrice(), bookDetails.getIsAvailableSale()));
     }
 }
