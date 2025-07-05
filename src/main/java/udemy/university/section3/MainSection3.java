@@ -7,6 +7,7 @@ public class MainSection3 {
         bookDetails();
         personDetails();
         dataType();
+        challengerProductDetail();
     }
 
     public void variables() {
@@ -49,7 +50,13 @@ public class MainSection3 {
     }
 
     public void dataType() {
-        System.out.println("***************************** DAta Type **************************");
+        System.out.println("***************************** Data Type **************************");
         System.out.println(DataTypes.dataTypes());
+    }
+    public void challengerProductDetail() {
+        System.out.println("***************************** Challenger Product Detail **************************");
+
+        ChallengerProductDetail challengerProductDetail = new ChallengerProductDetail();
+        System.out.println(challengerProductDetail.toString());
     }
 }
