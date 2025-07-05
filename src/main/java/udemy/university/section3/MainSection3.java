@@ -6,6 +6,7 @@ public class MainSection3 {
         variables();
         bookDetails();
         personDetails();
+        dataType();
     }
 
     public void variables() {
@@ -45,5 +46,10 @@ public class MainSection3 {
                 Country: %S
                 is Married: %c
                 """.formatted(personDetails.getName(), personDetails.getAge(), personDetails.getHeight(), personDetails.getCountry(), personDetails.getIsMarried()));
+    }
+
+    public void dataType() {
+        System.out.println("***************************** DAta Type **************************");
+        System.out.println(DataTypes.dataTypes());
     }
 }
