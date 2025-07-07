@@ -8,6 +8,7 @@ public class MainSection3 {
         personDetails();
         dataType();
         challengerProductDetail();
+        varVariable();
     }
 
     public void variables() {
@@ -58,5 +59,11 @@ public class MainSection3 {
 
         ChallengerProductDetail challengerProductDetail = new ChallengerProductDetail();
         System.out.println(challengerProductDetail.toString());
+    }
+    public void varVariable() {
+        System.out.println("***************************** Var Variable ***************************");
+        VarVariable varVariable = new VarVariable();
+        System.out.println(varVariable.toString());
+
     }
 }
