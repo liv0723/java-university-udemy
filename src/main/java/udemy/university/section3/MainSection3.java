@@ -9,6 +9,7 @@ public class MainSection3 {
         dataType();
         challengerProductDetail();
         varVariable();
+        stringConcatenation();
     }
 
     public void variables() {
@@ -65,5 +66,10 @@ public class MainSection3 {
         VarVariable varVariable = new VarVariable();
         System.out.println(varVariable.toString());
 
+    }
+    public void stringConcatenation() {
+        System.out.println("**************************** String Concatenation ************************");
+        StringConcatenation stringConcatenation = new StringConcatenation();
+        System.out.println(stringConcatenation.toString());
     }
 }
