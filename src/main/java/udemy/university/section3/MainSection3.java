@@ -11,6 +11,7 @@ public class MainSection3 {
         varVariable();
         stringConcatenation();
         constants();
+        challengerHotelReservation();
     }
 
     public void variables() {
@@ -77,5 +78,11 @@ public class MainSection3 {
         System.out.println("**************************** Constants *************************");
         Constants constants = new Constants();
         System.out.println(constants.toString());
+    }
+    public void challengerHotelReservation() {
+        System.out.println("*************************** Reservation Hotel ************************");
+        ChallengerHotelReservation challengerHotelReservation = new ChallengerHotelReservation();
+        System.out.println(challengerHotelReservation.toString());
+
     }
 }
