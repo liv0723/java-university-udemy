@@ -10,6 +10,7 @@ public class MainSection3 {
         challengerProductDetail();
         varVariable();
         stringConcatenation();
+        constants();
     }
 
     public void variables() {
@@ -71,5 +72,10 @@ public class MainSection3 {
         System.out.println("**************************** String Concatenation ************************");
         StringConcatenation stringConcatenation = new StringConcatenation();
         System.out.println(stringConcatenation.toString());
+    }
+    public void constants() {
+        System.out.println("**************************** Constants *************************");
+        Constants constants = new Constants();
+        System.out.println(constants.toString());
     }
 }
