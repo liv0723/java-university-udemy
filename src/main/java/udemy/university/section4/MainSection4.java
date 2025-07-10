@@ -11,6 +11,7 @@ public class MainSection4 {
         searchSubString();
         replaceSubString();
         concatenationString();
+        specialCharacterString();
     }
 
     public void classString() {
@@ -58,5 +59,10 @@ public class MainSection4 {
         System.out.println("***************************** Concatenation String *********************************");
         ConcatenationString concatenationString = new ConcatenationString();
         System.out.println(concatenationString.toString());
+    }
+    public void specialCharacterString() {
+        System.out.println("***************************** Special Character String ****************************");
+        SpecialCharacterString specialCharacterString = new SpecialCharacterString();
+        System.out.println(specialCharacterString.toString());
     }
 }
