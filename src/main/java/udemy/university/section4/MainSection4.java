@@ -9,6 +9,7 @@ public class MainSection4 {
         stringMethods();
         subString();
         searchSubString();
+        replaceSubString();
     }
 
     public void classString() {
@@ -46,5 +47,10 @@ public class MainSection4 {
         System.out.println("************************* Search SusString ******************************");
         SearchSubString searchSubString = new SearchSubString();
         System.out.println(searchSubString.findSubString());
+    }
+    public void replaceSubString() {
+        System.out.println("**************************Replace Sub String ******************************");
+        ReplaceSubString replaceSubString = new ReplaceSubString();
+        System.out.println(replaceSubString.replaceSubString());
     }
 }
