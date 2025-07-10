@@ -6,6 +6,7 @@ public class MainSection4 {
         indicesString();
         immutabilityString();
         comparisonString();
+        stringMethods();
     }
 
     public void classString() {
@@ -28,5 +29,10 @@ public class MainSection4 {
         System.out.println("*********************** Comparison String ***********************");
         ComparisonString comparisonString = new ComparisonString();
         System.out.println(comparisonString.toString());
+    }
+    public void stringMethods() {
+        System.out.println("*********************** String Method ************************");
+        StringMethods stringMethods = new StringMethods();
+        System.out.println(stringMethods.toString());
     }
 }
