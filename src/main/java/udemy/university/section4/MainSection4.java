@@ -8,6 +8,7 @@ public class MainSection4 {
         comparisonString();
         stringMethods();
         subString();
+        searchSubString();
     }
 
     public void classString() {
@@ -40,5 +41,10 @@ public class MainSection4 {
         System.out.println("************************ Sub String *******************************");
         SubString subString = new SubString();
         System.out.println(subString.generateSubStrings());
+    }
+    public void searchSubString() {
+        System.out.println("************************* Search SusString ******************************");
+        SearchSubString searchSubString = new SearchSubString();
+        System.out.println(searchSubString.findSubString());
     }
 }
