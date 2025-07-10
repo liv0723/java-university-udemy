@@ -7,6 +7,7 @@ public class MainSection4 {
         immutabilityString();
         comparisonString();
         stringMethods();
+        subString();
     }
 
     public void classString() {
@@ -34,5 +35,10 @@ public class MainSection4 {
         System.out.println("*********************** String Method ************************");
         StringMethods stringMethods = new StringMethods();
         System.out.println(stringMethods.toString());
+    }
+    public void subString() {
+        System.out.println("************************ Sub String *******************************");
+        SubString subString = new SubString();
+        System.out.println(subString.generateSubStrings());
     }
 }
