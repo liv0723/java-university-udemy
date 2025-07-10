@@ -10,6 +10,7 @@ public class MainSection4 {
         subString();
         searchSubString();
         replaceSubString();
+        concatenationString();
     }
 
     public void classString() {
@@ -52,5 +53,10 @@ public class MainSection4 {
         System.out.println("**************************Replace Sub String ******************************");
         ReplaceSubString replaceSubString = new ReplaceSubString();
         System.out.println(replaceSubString.replaceSubString());
+    }
+    public void concatenationString() {
+        System.out.println("***************************** Concatenation String *********************************");
+        ConcatenationString concatenationString = new ConcatenationString();
+        System.out.println(concatenationString.toString());
     }
 }
