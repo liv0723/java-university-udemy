@@ -12,6 +12,7 @@ public class MainSection4 {
         replaceSubString();
         concatenationString();
         specialCharacterString();
+        challengerEmail();
     }
 
     public void classString() {
@@ -64,5 +65,10 @@ public class MainSection4 {
         System.out.println("***************************** Special Character String ****************************");
         SpecialCharacterString specialCharacterString = new SpecialCharacterString();
         System.out.println(specialCharacterString.toString());
+    }
+    public void challengerEmail() {
+        System.out.println("**************************** Challenger Email **************************");
+        ChallengerGeneratorEmail challengerGeneratorEmail = new ChallengerGeneratorEmail();
+        System.out.println(challengerGeneratorEmail.generateEmail());
     }
 }
