@@ -8,7 +8,8 @@ public class MainSection5 {
         //employedSystem();
         //cookingRecipes();
         //randomClass();
-        stringFormat();
+        //stringFormat();
+        generateID();
     }
     public void scannerClass() {
         System.out.println("************************* Scanner Class ***********************");
@@ -36,7 +37,10 @@ public class MainSection5 {
         System.out.println("**************************** String Format ****************************");
         StringFormat stringFormat = new StringFormat();
         System.out.println(stringFormat.stringFormat());
-
-
+    }
+    public void generateID() {
+        System.out.println("***************************** Generate ID ***********************");
+        GenerateID generateID = new GenerateID();
+        System.out.println(generateID.toString());
     }
 }
