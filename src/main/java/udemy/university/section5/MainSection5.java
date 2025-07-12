@@ -7,7 +7,8 @@ public class MainSection5 {
         //scannerClass();
         //employedSystem();
         //cookingRecipes();
-        randomClass();
+        //randomClass();
+        stringFormat();
     }
     public void scannerClass() {
         System.out.println("************************* Scanner Class ***********************");
@@ -30,5 +31,12 @@ public class MainSection5 {
         RandomClass randomClass = new RandomClass();
         System.out.println(randomClass.generateNumber());
         System.out.println(randomClass.throwDice());
+    }
+    public void stringFormat() {
+        System.out.println("**************************** String Format ****************************");
+        StringFormat stringFormat = new StringFormat();
+        System.out.println(stringFormat.stringFormat());
+
+
     }
 }
