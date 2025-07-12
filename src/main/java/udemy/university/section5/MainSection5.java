@@ -1,10 +1,13 @@
 package udemy.university.section5;
 
+import java.util.Random;
+
 public class MainSection5 {
     public MainSection5() {
-        scannerClass();
-        employedSystem();
-        cookingRecipes();
+        //scannerClass();
+        //employedSystem();
+        //cookingRecipes();
+        randomClass();
     }
     public void scannerClass() {
         System.out.println("************************* Scanner Class ***********************");
@@ -21,5 +24,11 @@ public class MainSection5 {
         System.out.println("****************************** Cooking Recipes *************************");
         CookingRecipes cookingRecipes = new CookingRecipes();
         System.out.println(cookingRecipes.toString());
+    }
+    public void randomClass() {
+        System.out.println("*************************** Random Class ****************************");
+        RandomClass randomClass = new RandomClass();
+        System.out.println(randomClass.generateNumber());
+        System.out.println(randomClass.throwDice());
     }
 }

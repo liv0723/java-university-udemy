@@ -7,9 +7,9 @@ import udemy.university.section5.MainSection5;
 public class Main {
 
     public static void main(String [] args) {
-        MainSection2 mainSection2 = new MainSection2();
-        MainSection3 mainSection3 = new MainSection3();
-        MainSection4 mainSection4 = new MainSection4();
+        //MainSection2 mainSection2 = new MainSection2();
+        //MainSection3 mainSection3 = new MainSection3();
+        //MainSection4 mainSection4 = new MainSection4();
         MainSection5 mainSection5 = new MainSection5();
     }
 
