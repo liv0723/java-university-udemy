@@ -7,7 +7,8 @@ public class MainSection6 {
         //unaryOperators();
         //assignmentOperators();
         //comparisonOperators();
-        logicOperators();
+        //logicOperators();
+        determineInside();
     }
 
     public void arithmeticOperators() {
@@ -38,6 +39,12 @@ public class MainSection6 {
         System.out.println("********************* Logic Operator **************************");
         LogicOperators logicOperators = new LogicOperators();
         System.out.println(logicOperators.toString());
+    }
+
+    public void determineInside() {
+        System.out.println("********************** Determine Inside ***************************");
+        DetermineInside determineInside = new DetermineInside();
+        System.out.println(determineInside.toString());
     }
 
 }
