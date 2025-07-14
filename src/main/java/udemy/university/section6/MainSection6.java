@@ -5,7 +5,8 @@ public class MainSection6 {
     public MainSection6() {
         //arithmeticOperators();
         //unaryOperators();
-        assignmentOperators();
+        //assignmentOperators();
+        comparisonOperators();
     }
 
     public void arithmeticOperators() {
@@ -24,6 +25,12 @@ public class MainSection6 {
         System.out.println("******************** Assignment Operators ***********************");
         AssignmentOperators assignmentOperators = new AssignmentOperators();
         System.out.println(assignmentOperators.toString());
+    }
+
+    public void comparisonOperators() {
+        System.out.println("********************** Comparison Operators ***********************");
+        ComparisonOperators comparisonOperators = new ComparisonOperators();
+        System.out.println(comparisonOperators.tostring());
     }
 
 }
