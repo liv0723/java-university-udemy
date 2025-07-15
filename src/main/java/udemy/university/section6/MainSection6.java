@@ -8,7 +8,8 @@ public class MainSection6 {
         //assignmentOperators();
         //comparisonOperators();
         //logicOperators();
-        determineInside();
+        //determineInside();
+        discountStore();
     }
 
     public void arithmeticOperators() {
@@ -45,6 +46,11 @@ public class MainSection6 {
         System.out.println("********************** Determine Inside ***************************");
         DetermineInside determineInside = new DetermineInside();
         System.out.println(determineInside.toString());
+    }
+    public void discountStore() {
+        System.out.println("************************** Discount Store ****************************");
+        DiscountInStore discountInStore = new DiscountInStore();
+        System.out.println(discountInStore.toString());
     }
 
 }
