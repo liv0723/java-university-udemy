@@ -1,5 +1,7 @@
 package udemy.university.section6;
 
+import java.util.concurrent.TimeUnit;
+
 public class MainSection6 {
 
     public MainSection6() {
@@ -11,7 +13,8 @@ public class MainSection6 {
         //determineInside();
         //discountStore();
         //library();
-        outRange();
+        //outRange();
+        ticketSale();
     }
 
     public void arithmeticOperators() {
@@ -75,6 +78,13 @@ public class MainSection6 {
 
         OutRange outRange = new OutRange();
         System.out.println(outRange.toString());
+    }
+
+    public void ticketSale() {
+        System.out.println("****************************** Ticket Sale *******************************");
+
+        TicketSale ticketSale = new TicketSale();
+        System.out.println(ticketSale.toString());
     }
 
 
