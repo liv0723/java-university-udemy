@@ -10,7 +10,8 @@ public class MainSection6 {
         //logicOperators();
         //determineInside();
         //discountStore();
-        library();
+        //library();
+        outRange();
     }
 
     public void arithmeticOperators() {
@@ -67,6 +68,13 @@ public class MainSection6 {
 
         Library library = new Library();
         System.out.println(library.toString());
+    }
+
+    public void outRange() {
+        System.out.println("***************************** Out Range *****************************");
+
+        OutRange outRange = new OutRange();
+        System.out.println(outRange.toString());
     }
 
 
