@@ -14,7 +14,8 @@ public class MainSection6 {
         //discountStore();
         //library();
         //outRange();
-        ticketSale();
+        //ticketSale();
+        authenticationSystem();
     }
 
     public void arithmeticOperators() {
@@ -85,6 +86,12 @@ public class MainSection6 {
 
         TicketSale ticketSale = new TicketSale();
         System.out.println(ticketSale.toString());
+    }
+    public void authenticationSystem() {
+        System.out.println("***************************** Authentication System ***************************");
+
+        AuthenticationSystem authenticationSystem = new AuthenticationSystem();
+        System.out.println(authenticationSystem.toString());
     }
 
 
