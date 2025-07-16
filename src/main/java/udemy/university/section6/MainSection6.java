@@ -15,7 +15,8 @@ public class MainSection6 {
         //library();
         //outRange();
         //ticketSale();
-        authenticationSystem();
+        //authenticationSystem();
+        rectangle();
     }
 
     public void arithmeticOperators() {
@@ -92,6 +93,12 @@ public class MainSection6 {
 
         AuthenticationSystem authenticationSystem = new AuthenticationSystem();
         System.out.println(authenticationSystem.toString());
+    }
+
+    public void rectangle() {
+        System.out.println("************************ Rectangle *******************************");
+        Rectangle rectangle = new Rectangle();
+        System.out.println(rectangle.toString());
     }
 
 
