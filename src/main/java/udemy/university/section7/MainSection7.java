@@ -5,7 +5,8 @@ import javax.crypto.spec.PSource;
 public class MainSection7 {
     public MainSection7() {
         //ifSentence();
-        examplePositive();
+        //examplePositive();
+        onLineStore();
     }
 
     public void ifSentence() {
@@ -19,5 +20,10 @@ public class MainSection7 {
         System.out.println("************************** Positive Example *******************");
         ExamplePositive examplePositive = new ExamplePositive();
         System.out.println(examplePositive.isPositive());
+    }
+    public void onLineStore() {
+        System.out.println("***************************** OnLine Store **************************");
+        OnlineStore onlineStore = new OnlineStore();
+        System.out.println(onlineStore.toString());
     }
 }
