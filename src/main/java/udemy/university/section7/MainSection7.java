@@ -6,7 +6,8 @@ public class MainSection7 {
     public MainSection7() {
         //ifSentence();
         //examplePositive();
-        onLineStore();
+        //onLineStore();
+        bankingSystem();
     }
 
     public void ifSentence() {
@@ -25,5 +26,11 @@ public class MainSection7 {
         System.out.println("***************************** OnLine Store **************************");
         OnlineStore onlineStore = new OnlineStore();
         System.out.println(onlineStore.toString());
+    }
+
+    public void bankingSystem() {
+        System.out.println("**************************** Banking System **************************");
+        BankingSystem bankingSystem = new BankingSystem();
+        System.out.println(bankingSystem.toString());
     }
 }
