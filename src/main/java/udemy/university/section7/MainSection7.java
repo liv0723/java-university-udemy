@@ -1,8 +1,11 @@
 package udemy.university.section7;
 
+import javax.crypto.spec.PSource;
+
 public class MainSection7 {
     public MainSection7() {
-        ifSentence();
+        //ifSentence();
+        examplePositive();
     }
 
     public void ifSentence() {
@@ -10,5 +13,11 @@ public class MainSection7 {
         IfSentence ifSentence = new IfSentence();
         System.out.println(ifSentence.isMayor());
         System.out.println(ifSentence.isMillionaire());
+    }
+
+    public void examplePositive() {
+        System.out.println("************************** Positive Example *******************");
+        ExamplePositive examplePositive = new ExamplePositive();
+        System.out.println(examplePositive.isPositive());
     }
 }
