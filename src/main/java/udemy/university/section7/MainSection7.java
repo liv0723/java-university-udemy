@@ -7,7 +7,8 @@ public class MainSection7 {
         //ifSentence();
         //examplePositive();
         //onLineStore();
-        bankingSystem();
+        //bankingSystem();
+        mirrorHouse();
     }
 
     public void ifSentence() {
@@ -32,5 +33,11 @@ public class MainSection7 {
         System.out.println("**************************** Banking System **************************");
         BankingSystem bankingSystem = new BankingSystem();
         System.out.println(bankingSystem.toString());
+    }
+
+    public void mirrorHouse() {
+        System.out.println("**************************** Mirror House *************************");
+        MirrorHouse mirrorHouse = new MirrorHouse();
+        System.out.println(mirrorHouse.toString());
     }
 }
