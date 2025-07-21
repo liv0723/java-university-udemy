@@ -10,7 +10,8 @@ public class MainSection7 {
         //bankingSystem();
         //mirrorHouse();
         //ternaryOperator();
-        appFitness();
+        //appFitness();
+        challengerHotelReservation();
     }
 
     public void ifSentence() {
@@ -53,5 +54,11 @@ public class MainSection7 {
         System.out.println("***************************** App Fitness ***************************");
         AppFitness appFitness = new AppFitness();
         System.out.println(appFitness.toString());
+    }
+
+    public void challengerHotelReservation() {
+        System.out.println("********************************** Challenger Reservation Hotel *********************************");
+        ChallengerHotelReservation challengerHotelReservation = new ChallengerHotelReservation();
+        System.out.println(challengerHotelReservation.toString());
     }
 }
