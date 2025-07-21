@@ -12,7 +12,8 @@ public class MainSection7 {
         //ternaryOperator();
         //appFitness();
         //challengerHotelReservation();
-        mayor();
+        //mayor();
+        seasonYear();
     }
 
     public void ifSentence() {
@@ -67,5 +68,11 @@ public class MainSection7 {
         System.out.println("***************************** Mayor ***************************");
         Mayor mayor = new Mayor();
         System.out.println(mayor.toString());
+    }
+
+    public void seasonYear() {
+        System.out.println("***************************** Season year *************************");
+        SeasonYear seasonYear = new SeasonYear();
+        System.out.print(seasonYear.toString());
     }
 }
