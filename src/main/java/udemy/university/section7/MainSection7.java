@@ -8,7 +8,8 @@ public class MainSection7 {
         //examplePositive();
         //onLineStore();
         //bankingSystem();
-        mirrorHouse();
+        //mirrorHouse();
+        ternaryOperator();
     }
 
     public void ifSentence() {
@@ -39,5 +40,11 @@ public class MainSection7 {
         System.out.println("**************************** Mirror House *************************");
         MirrorHouse mirrorHouse = new MirrorHouse();
         System.out.println(mirrorHouse.toString());
+    }
+
+    public void ternaryOperator() {
+        System.out.println("***************************Ternary Operator*****************");
+        TernaryOperator ternaryOperator = new TernaryOperator();
+        System.out.println(ternaryOperator.toString());
     }
 }
