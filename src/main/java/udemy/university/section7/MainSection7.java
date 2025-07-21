@@ -11,7 +11,8 @@ public class MainSection7 {
         //mirrorHouse();
         //ternaryOperator();
         //appFitness();
-        challengerHotelReservation();
+        //challengerHotelReservation();
+        mayor();
     }
 
     public void ifSentence() {
@@ -60,5 +61,11 @@ public class MainSection7 {
         System.out.println("********************************** Challenger Reservation Hotel *********************************");
         ChallengerHotelReservation challengerHotelReservation = new ChallengerHotelReservation();
         System.out.println(challengerHotelReservation.toString());
+    }
+
+    public void mayor() {
+        System.out.println("***************************** Mayor ***************************");
+        Mayor mayor = new Mayor();
+        System.out.println(mayor.toString());
     }
 }
