@@ -9,7 +9,8 @@ public class MainSection7 {
         //onLineStore();
         //bankingSystem();
         //mirrorHouse();
-        ternaryOperator();
+        //ternaryOperator();
+        appFitness();
     }
 
     public void ifSentence() {
@@ -46,5 +47,11 @@ public class MainSection7 {
         System.out.println("***************************Ternary Operator*****************");
         TernaryOperator ternaryOperator = new TernaryOperator();
         System.out.println(ternaryOperator.toString());
+    }
+
+    public void appFitness() {
+        System.out.println("***************************** App Fitness ***************************");
+        AppFitness appFitness = new AppFitness();
+        System.out.println(appFitness.toString());
     }
 }
