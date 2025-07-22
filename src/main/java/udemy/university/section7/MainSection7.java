@@ -13,9 +13,9 @@ public class MainSection7 {
         //appFitness();
         //challengerHotelReservation();
         //mayor();
-        //seasonYear();
+        seasonYear();
         //switchSentence();
-        dayWeek();
+        //dayWeek();
     }
 
     public void ifSentence() {
@@ -76,6 +76,7 @@ public class MainSection7 {
         System.out.println("***************************** Season year *************************");
         SeasonYear seasonYear = new SeasonYear();
         System.out.print(seasonYear.toString());
+        System.out.println(seasonYear.seasonYear());
     }
 
     public void switchSentence() {
