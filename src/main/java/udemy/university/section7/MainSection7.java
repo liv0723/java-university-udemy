@@ -13,7 +13,8 @@ public class MainSection7 {
         //appFitness();
         //challengerHotelReservation();
         //mayor();
-        seasonYear();
+        //seasonYear();
+        switchSentence();
     }
 
     public void ifSentence() {
@@ -74,5 +75,11 @@ public class MainSection7 {
         System.out.println("***************************** Season year *************************");
         SeasonYear seasonYear = new SeasonYear();
         System.out.print(seasonYear.toString());
+    }
+
+    public void switchSentence() {
+        System.out.println("**************************** Switch Sentence ******************************");
+        SwitchSentence switchSentence = new SwitchSentence();
+        System.out.println(switchSentence.syntaxClassic());
     }
 }
