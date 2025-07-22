@@ -14,7 +14,8 @@ public class MainSection7 {
         //challengerHotelReservation();
         //mayor();
         //seasonYear();
-        switchSentence();
+        //switchSentence();
+        dayWeek();
     }
 
     public void ifSentence() {
@@ -81,5 +82,12 @@ public class MainSection7 {
         System.out.println("**************************** Switch Sentence ******************************");
         SwitchSentence switchSentence = new SwitchSentence();
         System.out.println(switchSentence.syntaxClassic());
+    }
+
+    public void dayWeek() {
+        System.out.println("****************************** Day Week *******************************");
+        DayWeek dayWeek = new DayWeek();
+        System.out.println(dayWeek.dayWeekClassic());
+        System.out.println(dayWeek.dayWeekBetter());
     }
 }
