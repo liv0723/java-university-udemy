@@ -13,9 +13,10 @@ public class MainSection7 {
         //appFitness();
         //challengerHotelReservation();
         //mayor();
-        seasonYear();
+        //seasonYear();
         //switchSentence();
         //dayWeek();
+        gradingSystem();
     }
 
     public void ifSentence() {
@@ -90,5 +91,11 @@ public class MainSection7 {
         DayWeek dayWeek = new DayWeek();
         System.out.println(dayWeek.dayWeekClassic());
         System.out.println(dayWeek.dayWeekBetter());
+    }
+
+    public void gradingSystem() {
+        System.out.println("********************************* Grading System ****************************");
+        GradingSystem gradingSystem = new GradingSystem();
+        System.out.println(gradingSystem.toString());
     }
 }
