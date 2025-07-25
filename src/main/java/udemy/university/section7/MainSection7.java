@@ -16,7 +16,8 @@ public class MainSection7 {
         //seasonYear();
         //switchSentence();
         //dayWeek();
-        gradingSystem();
+        //gradingSystem();
+        shippingSystem();
     }
 
     public void ifSentence() {
@@ -97,5 +98,11 @@ public class MainSection7 {
         System.out.println("********************************* Grading System ****************************");
         GradingSystem gradingSystem = new GradingSystem();
         System.out.println(gradingSystem.toString());
+    }
+
+    public void shippingSystem() {
+        System.out.println("******************************** Shipping System ******************************");
+        ShippingSystem shippingSystem = new ShippingSystem();
+        System.out.println(shippingSystem.toString());
     }
 }
