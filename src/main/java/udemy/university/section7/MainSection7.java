@@ -17,7 +17,8 @@ public class MainSection7 {
         //switchSentence();
         //dayWeek();
         //gradingSystem();
-        shippingSystem();
+        //shippingSystem();
+        authenticationSystem();
     }
 
     public void ifSentence() {
@@ -104,5 +105,11 @@ public class MainSection7 {
         System.out.println("******************************** Shipping System ******************************");
         ShippingSystem shippingSystem = new ShippingSystem();
         System.out.println(shippingSystem.toString());
+    }
+
+    public void authenticationSystem() {
+        System.out.println("****************************** Authentication System *************************");
+        AuthenticationSystem authenticationSystem = new AuthenticationSystem();
+        System.out.println(authenticationSystem.toString());
     }
 }
