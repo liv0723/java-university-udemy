@@ -5,8 +5,15 @@ public class Persona {
     private String lastName;
     private int age;
 
+    public Persona(String name,String lastName, int age) {
+        super();
+        this.name = name;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
     public static void main(String[] args) {
-        var persona = new Persona();
+        var persona = new Persona("pepe", "Morales", 33);
         persona.showPerson();
     }
 
