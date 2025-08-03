@@ -52,7 +52,7 @@ class Cat extends Animal {
 class TestAnimal {
 
     public static void main(String[] args) {
-        var animal = new Cat();
+        Animal animal = new Animal();
         animal.doSound();
         animal.eat();
         animal.sleep();
@@ -69,7 +69,19 @@ class TestAnimal {
         cat.eat();
         cat.sleep();
 
+        //polymorphism
+        System.out.println();
+        printSound(animal);
+        printSound(dog);
+        printSound(cat);
+        Animal animal1 = new Dog();
+        Animal animal2 = new Cat();
+        printSound(animal1);
+        printSound(cat);
 
+    }
 
+    public static void printSound(Animal animal) {
+        animal.doSound();
     }
 }
