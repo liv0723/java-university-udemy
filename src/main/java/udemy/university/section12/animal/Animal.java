@@ -4,6 +4,10 @@ import java.util.Random;
 
 public class Animal {
 
+    protected void doSound() {
+        System.out.println("Animal Animal");
+    }
+
     public void eat() {
         System.out.println("Eating ....");
     }
@@ -15,9 +19,11 @@ public class Animal {
 
 class Dog extends Animal{
 
+    @Override
     public void doSound() {
         System.out.println("Woau Woau");
     }
+
      @Override
     protected void sleep() {
         var random = new Random();
@@ -28,6 +34,8 @@ class Dog extends Animal{
 }
 
 class Cat extends Animal {
+
+    @Override
     public void doSound() {
         System.out.println("Miau Miau");
     }
@@ -44,7 +52,8 @@ class Cat extends Animal {
 class TestAnimal {
 
     public static void main(String[] args) {
-        var animal = new Animal();
+        var animal = new Cat();
+        animal.doSound();
         animal.eat();
         animal.sleep();
         System.out.println();
@@ -57,8 +66,9 @@ class TestAnimal {
 
         Cat cat = new Cat();
         cat.doSound();
-        cat.sleep();
         cat.eat();
+        cat.sleep();
+
 
 
     }
