@@ -1,6 +1,4 @@
-package udemy.university.section13;
-
-import java.util.TreeMap;
+package udemy.university.section13.abstract_class;
 
 public class AbstractClass {
 
