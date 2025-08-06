@@ -1,5 +1,7 @@
 package udemy.university.section13.collections;
 
+import udemy.university.section4.SubString;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +15,10 @@ public class Lists {
         System.out.println();
         List<String> daysString = new ArrayList();
         noGenericsList(daysString);
+
+        System.out.println();
+        List<Integer> numbers = new ArrayList<>();
+        listWithLambdaFunctions(numbers);
 
 
 
@@ -49,6 +55,18 @@ public class Lists {
         for (Object elements : days) {
             System.out.print(elements + " ");
         }
+    }
+
+    public static void listWithLambdaFunctions(List<Integer> numbers) {
+        int num1 = 1, numb2 = 2, numb3 = 3;
+        numbers.add(num1);
+        numbers.add(numb2);
+        numbers.add(numb3);
+
+        numbers.forEach((element) -> {
+            System.out.print(element + " ");
+        });
+
     }
 
 }
