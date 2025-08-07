@@ -1,5 +1,7 @@
 package udemy.university.section9;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,7 +10,7 @@ public class ArraysJava {
     public static void main(String [] args) {
         //numbers();
         //showCountry();
-        average();
+        //average();
 
     }
 
@@ -69,5 +71,7 @@ public class ArraysJava {
         }
         System.out.println("The note is %.1f".formatted((average / notes.length)));
     }
+
+
 }
 
