@@ -22,7 +22,6 @@ public class Sets {
         System.out.println(names.size());
 
         List<Integer> aux = new ArrayList<>();
-        aux.to
 
 
     }

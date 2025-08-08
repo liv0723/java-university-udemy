@@ -85,6 +85,8 @@ public class Lists {
         List<String> namelIst = Arrays.asList("Pedro", "Maria", "Juana");
         System.out.println("\n List with the class Arrays  ");
         namelIst.forEach(System.out::println);
+
+
     }
 
 }
