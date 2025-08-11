@@ -16,14 +16,17 @@ public class ServiceSnacksList implements IServiceSnacks{
         snacks.add(new Snack("sandwish", 120));
     }
 
+    @Override
     public void addSnack(Snack snack) {
         ServiceSnacksList.snacks.add(snack);
     }
 
+    @Override
     public List<Snack> getSnacks() {
         return ServiceSnacksList.snacks;
     }
 
+    @Override
     public void showSnacks() {
         var inventory = "";
 
