@@ -2,6 +2,7 @@ package udemy.university.section14.snacks_machine.presentation;
 
 import udemy.university.section14.snacks_machine.entity.Snack;
 import udemy.university.section14.snacks_machine.service.IServiceSnacks;
+import udemy.university.section14.snacks_machine.service.ServiceSnacksFile;
 import udemy.university.section14.snacks_machine.service.ServiceSnacksList;
 
 import java.util.ArrayList;
@@ -15,19 +16,22 @@ public class SnacksMachine {
     }
 
     public static void snackMachine() {
+        System.out.println("************** Machine Snacks **************");
+        System.out.println();
+
         var out = false;
         var console = new Scanner(System.in);
         List<Snack> snacks = new ArrayList<>();
-        IServiceSnacks iserviceSnacksList = new ServiceSnacksList();
+        //IServiceSnacks iserviceSnacksList = new ServiceSnacksList();
+        IServiceSnacks iServiceSnacksFile = new ServiceSnacksFile();
 
-        System.out.println("************** Machine Snacks **************");
-        System.out.println();
-        iserviceSnacksList.showSnacks();
+
+        iServiceSnacksFile.showSnacks();
 
         while (!out) {
             try {
                 var option = showMenu(console);
-                out = doOption(option, console, snacks, iserviceSnacksList);
+                out = doOption(option, console, snacks, iServiceSnacksFile);
             } catch (Exception e) {
                 System.out.println("Do error" + e.getMessage());
             } finally {

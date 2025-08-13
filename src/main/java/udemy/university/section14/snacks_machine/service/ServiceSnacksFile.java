@@ -20,31 +20,57 @@ public class ServiceSnacksFile implements IServiceSnacks{
        try {
            exist = file.exists();
            if (exist) {
-               //this.snacks = getSnacks();
+//               this.snacks = getSnacks();
+//               System.out.println(this.snacks.isEmpty());
            } else {
                var out = new PrintWriter(new FileWriter(file));
                out.close(); //save the file
-               System.out.print("The file was created .....");
+               System.out.println("The file was created .....");
            }
        } catch (Exception e) {
            System.out.print("Error to create file: " + e);
        }
-       //if do not exist, charging the initial snacks
-       //chargingInitialSnacks();
+       //do not exist, charging the initial snacks
+       if (!exist) {
+           chargingInitialSnack();
+       }
    }
+
+    private void chargingInitialSnack() {
+        this.addSnack(new Snack("papa", 70));
+        this.addSnack(new Snack("refresco", 70));
+        this.addSnack(new Snack("pan", 70));
+    }
 
     @Override
     public void addSnack(Snack snack) {
-
+       this.snacks.add(snack);
+       this.addSnacksFile(snack);
     }
 
     @Override
     public List<Snack> getSnacks() {
-        return List.of();
+        return this.snacks;
     }
 
     @Override
     public void showSnacks() {
 
     }
+
+
+    private void addSnacksFile(Snack snack) {
+       var append = false;
+       var file = new File(this.NAME_FILE);
+       try {
+           append = file.exists();
+           var out = new PrintWriter(new FileWriter(file, append));
+           out.println(snack);
+           out.close();
+       } catch(Exception e) {
+           System.out.print(e);
+           e.printStackTrace();
+       }
+    }
+
 }
