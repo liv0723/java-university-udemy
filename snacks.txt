@@ -1,3 +1,4 @@
-Snack{idSnack=1, nameSnack='papa', priceSnack=70.0}
-Snack{idSnack=2, nameSnack='refresco', priceSnack=70.0}
-Snack{idSnack=3, nameSnack='pan', priceSnack=70.0}
+1,papa,70.0
+2,refresco,70.0
+3,pan,70.0
+4,chocolate,22.2

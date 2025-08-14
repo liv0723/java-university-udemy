@@ -6,6 +6,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +22,13 @@ public class ServiceSnacksFile implements IServiceSnacks{
        try {
            exist = file.exists();
            if (exist) {
-//               this.snacks = getSnacks();
-//               System.out.println(this.snacks.isEmpty());
+               this.snacks = obtenerSnacks();
+
            } else {
                var out = new PrintWriter(new FileWriter(file));
                out.close(); //save the file
                System.out.println("The file was created .....");
+
            }
        } catch (Exception e) {
            System.out.print("Error to create file: " + e);
@@ -33,6 +36,7 @@ public class ServiceSnacksFile implements IServiceSnacks{
        //do not exist, charging the initial snacks
        if (!exist) {
            chargingInitialSnack();
+           System.out.println(this.snacks.size());
        }
    }
 
@@ -48,14 +52,38 @@ public class ServiceSnacksFile implements IServiceSnacks{
        this.addSnacksFile(snack);
     }
 
-    @Override
-    public List<Snack> getSnacks() {
+
+    public List<Snack> obtenerSnacks() {
+        var snacks = new ArrayList<Snack>();
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(this.NAME_FILE));
+            for (String line: lines) {
+                var aux = line.split(",");
+                var nameSnack = aux[1];
+                var priceSnack = Double.parseDouble(aux[2]);
+                this.snacks.add(new Snack(nameSnack, priceSnack));
+            }
+
+        } catch(Exception e) {
+            System.out.print("error to read the snacks file: " + e.getMessage());
+            e.printStackTrace();
+        }
         return this.snacks;
     }
 
     @Override
-    public void showSnacks() {
+    public List<Snack> getSnacks() {
+       return this.snacks;
+    }
 
+    @Override
+    public void showSnacks() {
+       var inventorySnacks = "";
+       for( Snack snack: this.snacks) {
+           inventorySnacks = inventorySnacks.concat(snack.toString()) + "\n";
+       }
+       System.out.println("************ Inventory Snacks ****************");
+       System.out.println(inventorySnacks);
     }
 
 
@@ -65,7 +93,7 @@ public class ServiceSnacksFile implements IServiceSnacks{
        try {
            append = file.exists();
            var out = new PrintWriter(new FileWriter(file, append));
-           out.println(snack);
+           out.println(snack.writeSnack());
            out.close();
        } catch(Exception e) {
            System.out.print(e);

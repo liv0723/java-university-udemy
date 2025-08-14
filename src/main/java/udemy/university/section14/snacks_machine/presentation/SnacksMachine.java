@@ -22,10 +22,7 @@ public class SnacksMachine {
         var out = false;
         var console = new Scanner(System.in);
         List<Snack> snacks = new ArrayList<>();
-        //IServiceSnacks iserviceSnacksList = new ServiceSnacksList();
         IServiceSnacks iServiceSnacksFile = new ServiceSnacksFile();
-
-
         iServiceSnacksFile.showSnacks();
 
         while (!out) {
@@ -46,7 +43,8 @@ public class SnacksMachine {
                 1. Buy Snack
                 2. Show Ticket
                 3. Add new Snack
-                4. Out
+                4. Show Inventory
+                5. Out
                 Choose a option: \s""");
         return Integer.parseInt(console.nextLine().strip().toLowerCase());
 
@@ -64,6 +62,9 @@ public class SnacksMachine {
                 iServiceSnacks.showSnacks();
             }
             case 4 -> {
+                showInventory(iServiceSnacks);
+            }
+            case 5 -> {
                 out = true;
                 System.out.println("Exit....");
             }
@@ -112,5 +113,9 @@ public class SnacksMachine {
 
         iServiceSnacks.addSnack(new Snack(name, price));
         System.out.println("The snack was added");
+    }
+
+    public static void showInventory(IServiceSnacks iServiceSnacks) {
+        iServiceSnacks.showSnacks();
     }
 }
