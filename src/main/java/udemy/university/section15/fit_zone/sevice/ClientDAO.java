@@ -82,7 +82,31 @@ public class ClientDAO implements IClientDAO{
     }
 
     @Override
-    public boolean InsertClient(Client client) {
+    public boolean insertClient(Client client) {
+        PreparedStatement ps;
+        ResultSet rs;
+        var connection = getConnection();
+        var sql = "INSERT INTO client (name, lastname, membreship) VALUES (?, ?, ?)";
+
+        try {
+            ps = connection.prepareStatement(sql);
+            ps.setString(1, client.getName());
+            ps.setString(2, client.getLastname());
+            ps.setInt(3, client.getMembreship());
+            ps.execute();
+            return true;
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (Exception e) {
+                System.out.println("Error to close connection: " + e.getMessage());
+                e.printStackTrace();
+            }
+
+        }
         return false;
     }
 
@@ -95,7 +119,6 @@ public class ClientDAO implements IClientDAO{
     public boolean deleteClient(Client client) {
         return false;
     }
-
     public static Connection getConnection() {
         return ConnectionMysql.getConnection();
     }
@@ -105,7 +128,7 @@ public class ClientDAO implements IClientDAO{
 
 class Test {
     public static void main(String[] args) {
-        System.out.println("*********** List Clients **********");
+        System.out.println("*********** Clients **********");
         IClientDAO clientDAO = new ClientDAO();
         var clients = clientDAO.listClient();
 
@@ -113,6 +136,8 @@ class Test {
             clientDAO.searchClient(client);
         });
 
+
+        System.out.println( clientDAO.insertClient(new Client(20, "yan", "Cespedes", 500 )));
     }
 
 
