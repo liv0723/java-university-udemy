@@ -1,4 +1,4 @@
-package udemy.university.pattern.creationals.singleton;
+package udemy.university.pattern.creationals.factory.figure;
 
 public interface Figure {
     public double area();

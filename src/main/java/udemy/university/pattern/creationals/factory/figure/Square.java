@@ -1,6 +1,6 @@
-package udemy.university.pattern.creationals.singleton;
+package udemy.university.pattern.creationals.factory.figure;
 
-public class Circle implements Figure{
+public class Square implements Figure {
     private double ladeA;
     private double ladeB;
 
@@ -29,4 +29,5 @@ public class Circle implements Figure{
     public void setLadeB(double adeB) {
         this.ladeB = adeB;
     }
+
 }

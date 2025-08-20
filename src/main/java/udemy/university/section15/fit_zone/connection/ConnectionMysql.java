@@ -4,28 +4,36 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class ConnectionMysql {
+    public static ConnectionMysql connectionMysql;
+    private Connection connection;
+    private final String nameDB = "fit_zone_db";
+    private final String urlDB = "jdbc:mysql://127.0.0.1:/";
+    private final String userDB = "root";
+    private final String passDB = "0723/Liverp";
 
-    public static Connection getConnection() {
-        Connection connection = null;
-        var nameDB = "fit_zone_db";
-        var url = "jdbc:mysql://127.0.0.1:3306/" + nameDB;
-        var userDB = "root";
-        var passBD = "0723/Liverp";
-
+    private ConnectionMysql() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, userDB, passBD);
-
-        } catch(Exception e) {
-            System.out.print("Error to connect DB: " + e.getMessage());
-            e.printStackTrace();
+            this.connection = DriverManager.getConnection(this.urlDB, this.userDB, this.passDB);
+            //System.out.println("connected");
+        } catch (Exception e) {
+            System.out.println("Error to connect DB: " + e.getMessage());
         }
+    }
 
-        return connection;
+    public static ConnectionMysql getInstance() {
+        if (ConnectionMysql.connectionMysql == null) {
+            ConnectionMysql.connectionMysql = new ConnectionMysql();
+        }
+        return ConnectionMysql.connectionMysql;
+    }
+
+    public Connection getConnection() {
+        return this.connection;
     }
 
     public static void main(String[] args) {
-        var connection = ConnectionMysql.getConnection();
+        var connection = ConnectionMysql.getInstance().getConnection();
 
         if(connection != null) {
             System.out.print("Connected to DB ...... \s\s" + connection);

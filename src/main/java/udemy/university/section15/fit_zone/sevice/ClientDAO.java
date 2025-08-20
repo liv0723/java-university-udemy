@@ -16,8 +16,8 @@ public class ClientDAO implements IClientDAO{
         List<Client> clients = new ArrayList<>();
         PreparedStatement ps;
         ResultSet rs;
-        Connection connection = ConnectionMysql.getConnection();
-        var sql = "SELECT * FROM client ORDER BY id";
+        Connection connection = ConnectionMysql.getInstance().getConnection();
+        var sql = "SELECT * FROM fit_zone_db.client ORDER BY id";
 
         try {
             ps = connection.prepareStatement(sql);
@@ -37,7 +37,7 @@ public class ClientDAO implements IClientDAO{
             e.printStackTrace();
         } finally {
             try {
-                connection.close();
+                //connection.close();
             } catch (Exception e) {
                 System.out.println("Error t close connection with the DB: " + e.getMessage());
                 e.printStackTrace();
@@ -54,7 +54,7 @@ public class ClientDAO implements IClientDAO{
         PreparedStatement ps;
         ResultSet rs;
         var connection = getConnection();
-        var sql = "SELECT * FROM client WHERE id = ?";
+        var sql = "SELECT * FROM fit_zone_db.client WHERE id = ?";
 
         try {
             ps = connection.prepareStatement(sql);
@@ -74,7 +74,7 @@ public class ClientDAO implements IClientDAO{
         }
         finally {
             try {
-                connection.close();
+                //connection.close();
             } catch (Exception e) {
             }
         }
@@ -86,7 +86,7 @@ public class ClientDAO implements IClientDAO{
         PreparedStatement ps;
         ResultSet rs;
         var connection = getConnection();
-        var sql = "INSERT INTO client (name, lastname, membreship) VALUES (?, ?, ?)";
+        var sql = "INSERT INTO fit_zone_db.client (name, lastname, membreship) VALUES (?, ?, ?)";
 
         try {
             ps = connection.prepareStatement(sql);
@@ -100,7 +100,7 @@ public class ClientDAO implements IClientDAO{
             e.printStackTrace();
         } finally {
             try {
-                connection.close();
+                //connection.close();
             } catch (Exception e) {
                 System.out.println("Error to close connection: " + e.getMessage());
                 e.printStackTrace();
@@ -112,15 +112,63 @@ public class ClientDAO implements IClientDAO{
 
     @Override
     public boolean updateClient(Client client) {
-        return false;
+        PreparedStatement ps;
+        ResultSet rs;
+        String sql = "UPDATE fit_zone_db.client SET name = ?, lastname = ?, membreship = ? WHERE id = ?";
+        Connection connection = getConnection();
+        var aux = false;
+
+        try {
+            ps = connection.prepareStatement(sql);
+            ps.setString(1, client.getName());
+            ps.setString(2, client.getLastname());
+            ps.setInt(3, client.getMembreship());
+            ps.setInt(4, client.getId());
+//            if (ps.execute() ) {
+//
+//                return true;
+//            }
+            aux = ps.execute();
+            System.out.println(aux);
+
+        } catch (Exception e) {
+            System.out.println("Error to update client: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
+            try {
+                //connection.close();
+            } catch (Exception e) {
+                System.out.println("Error to closing the connection: " + e.getMessage());
+            }
+        }
+        return aux;
+        //return false;
     }
 
     @Override
     public boolean deleteClient(Client client) {
-        return false;
+        PreparedStatement ps;
+        ResultSet rs;
+        var sql = "DELETE FROM fit_zone_db.client WHERE id = ?";
+        Connection connection = getConnection();
+        boolean result = true;
+        try {
+            ps = connection.prepareStatement(sql);
+            ps.setInt(1, client.getId());
+            result = ps.execute();
+        } catch (Exception e) {
+            System.out.println("Error to deleting client: " + e.getMessage());
+        } finally {
+            try {
+                //connection.close();
+            } catch (Exception e) {
+                System.out.println("Error to closing the connection: " + e.getMessage());
+            }
+        }
+        return result;
     }
     public static Connection getConnection() {
-        return ConnectionMysql.getConnection();
+        return ConnectionMysql.getInstance().getConnection();
     }
 
 
@@ -131,13 +179,10 @@ class Test {
         System.out.println("*********** Clients **********");
         IClientDAO clientDAO = new ClientDAO();
         var clients = clientDAO.listClient();
-
-        clients.forEach(client -> {
-            clientDAO.searchClient(client);
-        });
+        clients.forEach(client -> System.out.println(client.toString()));
 
 
-        System.out.println( clientDAO.insertClient(new Client(20, "yan", "Cespedes", 500 )));
+
     }
 
 

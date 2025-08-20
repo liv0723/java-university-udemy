@@ -1,4 +1,4 @@
-package udemy.university.pattern.creationals.singleton;
+package udemy.university.pattern.creationals.factory.figure;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package udemy.university.pattern.creationals.factory;
+package udemy.university.pattern.creationals.singleton.person;
 
 public class Person {
     public static Person person;
